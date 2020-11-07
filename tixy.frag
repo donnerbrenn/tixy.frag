@@ -1,4 +1,4 @@
-uniform int iTime;
+uniform int t;
 
 float tixy(float t, int i, int x, int y)
 {
@@ -15,8 +15,6 @@ void main()
       float x=index.x;
       float y=index.y;
       float i=y*size+x;
-      float t=iTime*.001;
-
       float r=clamp(tixy(t,int(i), int(x), int(y)),-.9,.9);
 
       gl_FragColor.x=float((length(offset)-abs(r))<0);
