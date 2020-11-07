@@ -1,4 +1,4 @@
-uniform int t;
+uniform float t;
 
 float tixy(float t, int i, int x, int y)
 {
